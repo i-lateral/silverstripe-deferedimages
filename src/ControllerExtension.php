@@ -19,7 +19,7 @@ class ControllerExtension extends Extension
     public function onAfterInit()
     {
         if (Config::inst()->get(static::class, 'load_script')) {
-            Requirements::javascript('ilateral/silverstripe-deferedimages:client/dist/js/deferedimages.min.js');
+            Requirements::javascript('i-lateral/silverstripe-deferedimages:client/dist/js/deferedimages.min.js');
         }
     }
 }
