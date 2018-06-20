@@ -4,6 +4,7 @@ namespace ilateral\SilverStripe\DeferedImages;
 
 use SilverStripe\Dev\Debug;
 use SilverStripe\View\HTML;
+use SilverStripe\Assets\File;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Assets\Storage\AssetStore;
@@ -56,7 +57,7 @@ class DeferedImageShortcodeProvider extends ImageShortcodeProvider
             if ($hasCustomDimensions && (($width != $record->getWidth()) || ($height != $record->getHeight()))) {
                 $resized = $record->ResizedImage($width, $height);
                 // Make sure that the resized image actually returns an image
-                if ($resized) {
+                if (!empty($resized)) {
                     $src = $resized->getURL();
                 }
             }
