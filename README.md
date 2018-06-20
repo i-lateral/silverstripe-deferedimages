@@ -17,6 +17,7 @@ To enable deferring of images added in a `HTMLEditorField` you will need to enab
 
 ```
 <?php
+
 use SilverStripe\View\Parsers\ShortcodeParser;
 use ilateral\SilverStripe\DeferedImages\DeferedImageShortcodeProvider;
 

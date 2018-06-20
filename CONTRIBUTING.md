@@ -6,8 +6,8 @@ welcome any feedback that a user may have.
 If you encounter any issues, have any ideas or want to request a feature,
 please use the following links:
 
- * [Sharing your opinion and raising issues](https://github.com/i-lateral/silverstripe-childhubpage/issues)
- * [Submit a pull request](https://github.com/i-lateral/silverstripe-childhubpage/pulls)
+ * [Sharing your opinion and raising issues](https://github.com/i-lateral/silverstripe-deferedimages/issues)
+ * [Submit a pull request](https://github.com/i-lateral/silverstripe-deferedimages/pulls)
 
 ## Translations
 
