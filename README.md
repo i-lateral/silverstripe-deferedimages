@@ -1,4 +1,7 @@
-# silverstripe-deferedimages
+# Silverstripe Defered Images Module
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/i-lateral/silverstripe-deferedimages/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/i-lateral/silverstripe-deferedimages/?branch=master)
+
 Module that loads images as a very low res version first, then uses JavaScript to load the full version
 
 By default all images called in the templates using the standard `$Image.Type()` call will be defered.
