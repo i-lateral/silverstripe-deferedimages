@@ -1,0 +1,16 @@
+---
+Name: deferedimages
+---
+SilverStripe\Assets\Storage\DBFile:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\DeferedImage
+SilverStripe\Assets\Image:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\DeferedImage
+---
+Only:
+  moduleexists: 'silverstripe/cms'
+---
+PageController:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
