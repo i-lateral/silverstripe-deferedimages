@@ -4,6 +4,39 @@
 
 Module that loads images as a very low res version first, then uses JavaScript to load the full version
 
+## Installation
+
+install via composer
+
+``` 
+composer require i-lateral/silverstripe-deferedimages
+```
+## Setup
+
+By default this is added to the `PageController` if it's available. This can be added to extra controller via config.yml:
+
+```
+<YourController>:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+```
+
+### Theme
+
+This module has a small theme addon that needs to be added you your theme stack in config.yml to load it's template.
+
+```
+SilverStripe\View\SSViewer:
+  themes:
+    - 'custom' //your_theme
+    - 'deferedimages'
+    - '$default'
+```
+
+Alternatively, you can copy the template into your own theme.
+
+## Configuration
+
 By default all images called in the templates using the standard `$Image.Type()` call will be defered.
 
 The temporary image can be customised in size, quality and appearance via config:
