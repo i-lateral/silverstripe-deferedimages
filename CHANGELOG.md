@@ -17,3 +17,7 @@ Update requirements to stable theme version
 ## 1.0.3
 
 Make required assets version more lenient
+
+## 1.0.4
+
+Attach image load to window.load event stack (rather than hijacking it)

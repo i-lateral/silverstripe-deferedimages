@@ -5,6 +5,12 @@ function imagedefer() {
         if(imgDefer[i].getAttribute('data-src')) {
             imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
         } 
-    } 
+    }
 }
-window.onload = imagedefer;
+
+if (window.addEventListener) {
+    window.addEventListener('load', imagedefer, false);
+} else if (window.attachEvent) {
+    // Microsoft
+    window.attachEvent('onload', imagedefer);
+}
