@@ -16,7 +16,7 @@
     },
     "require": {
         "silverstripe/framework": "~4.0",
-        "silverstripe/assets": "~1.1.2",
+        "silverstripe/assets": "~1.0",
         "i-lateral/silverstripe-deferedimages-theme": "^1.0"
     },
     "extra": {
