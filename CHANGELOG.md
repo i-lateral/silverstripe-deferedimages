@@ -21,3 +21,10 @@ Make required assets version more lenient
 ## 1.0.4
 
 Attach image load to window.load event stack (rather than hijacking it)
+
+## 1.0.5
+
+* Wrap JS in contained function (for better compatability).
+* Automatically require defered images when `silvercommerce/catalogue-frontend` is installed.
+* Add Requirement call to `onBeforeInit` (instead of `onAfterInit`).
+* Make the Requirement call inline
