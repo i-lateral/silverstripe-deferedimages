@@ -7,10 +7,21 @@ SilverStripe\Assets\Storage\DBFile:
 SilverStripe\Assets\Image:
   extensions:
     - ilateral\SilverStripe\DeferedImages\DeferedImage
+
+# Automatically add to pages
 ---
 Only:
   moduleexists: 'silverstripe/cms'
 ---
 PageController:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+  
+# If catalogue frontend installed, add to the controller
+---
+Only:
+  moduleexists: 'silvercommerce/catalogue-frontend'
+---
+SilverCommerce\CatalogueFrontend\Control\CatalogueController:
   extensions:
     - ilateral\SilverStripe\DeferedImages\ControllerExtension
