@@ -16,7 +16,7 @@ class ControllerExtension extends Extension
      */
     private static $load_script = true;
 
-    public function onAfterInit()
+    public function onBeforeInit()
     {
         if (Config::inst()->get(static::class, 'load_script')) {
             Requirements::javascript('i-lateral/silverstripe-deferedimages:client/dist/js/deferedimages.min.js');
