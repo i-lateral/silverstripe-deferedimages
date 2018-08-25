@@ -28,3 +28,7 @@ Attach image load to window.load event stack (rather than hijacking it)
 * Automatically require defered images when `silvercommerce/catalogue-frontend` is installed.
 * Add Requirement call to `onBeforeInit` (instead of `onAfterInit`).
 * Make the Requirement call inline
+
+## 1.0.6
+
+* Add support for other SS modules that don't extend Controller Controller

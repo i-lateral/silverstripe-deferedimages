@@ -16,6 +16,27 @@ Only:
 PageController:
   extensions:
     - ilateral\SilverStripe\DeferedImages\ControllerExtension
+
+# If searchable installed, auto-add
+---
+Only:
+  moduleexists: 'i-lateral/silverstripe-searchable'
+---
+ilateral\SilverStripe\Searchable\Control\SearchResults:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+
+# If users module installed, auto-add
+---
+Only:
+  moduleexists: 'i-lateral/silverstripe-users'
+---
+ilateral\SilverStripe\Users\Control\RegisterController:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+ilateral\SilverStripe\Users\Control\AccountController:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
   
 # If catalogue frontend installed, add to the controller
 ---
@@ -23,5 +44,23 @@ Only:
   moduleexists: 'silvercommerce/catalogue-frontend'
 ---
 SilverCommerce\CatalogueFrontend\Control\CatalogueController:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+
+# If shopping cart installed, add to the controller
+---
+Only:
+  moduleexists: 'silvercommerce/shoppingcart'
+---
+SilverCommerce\ShoppingCart\Control\ShoppingCart:
+  extensions:
+    - ilateral\SilverStripe\DeferedImages\ControllerExtension
+
+# If checkout installed, add to the controller
+---
+Only:
+  moduleexists: 'silvercommerce/checkout'
+---
+SilverCommerce\Checkout\Control\Checkout:
   extensions:
     - ilateral\SilverStripe\DeferedImages\ControllerExtension
