@@ -43,6 +43,14 @@ class DeferedImage extends DataExtension
     private static $scale = 100;
 
     /**
+     * maximum width of image before processing
+     * 
+     * @config
+     * @var integer
+     */
+    private static $limit = 1000;
+
+    /**
      * Generates a reduced quality version of the current image
      * @config
      * @return void
@@ -53,19 +61,24 @@ class DeferedImage extends DataExtension
         $blur = $this->config()->blur;
         $quality = $this->config()->quality;
         $scale = $this->config()->scale;
+        $limit = $this->config()->limit;
         
         $variant = $this->owner->variantName(__FUNCTION__, $pixel, $blur, $quality, $scale);
         return $this->owner->manipulateImage(
             $variant, 
-            function (Image_Backend $backend) use ($pixel, $blur, $quality, $scale) {
+            function (Image_Backend $backend) use ($pixel, $blur, $quality, $scale, $limit) {
+                $width = $backend->getWidth();
+                if ($width > 0 && $width > $limit && ($scale == 100 || $scale == null)) {
+                    $scale = ($limit/$width)*100;
+                }
                 $clone = clone $backend;
                 $resource = clone $backend->getImageResource();
-                $resource->pixelate($pixel)->blur($blur)->encode('jpg', $quality);
                 if ($scale != 100) {
                     $width = $backend->getWidth() * ($scale/100);
                     $height = $backend->getHeight() * ($scale/100);
                     $resource->resize($width, $height);
                 }
+                $resource->pixelate($pixel)->blur($blur)->encode('jpg', $quality);
                 $clone->setImageResource($resource);
                 return $clone;
             }

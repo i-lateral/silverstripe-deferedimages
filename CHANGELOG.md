@@ -32,3 +32,7 @@ Attach image load to window.load event stack (rather than hijacking it)
 ## 1.0.6
 
 * Add support for other SS modules that don't extend Controller Controller
+
+## 1.1.0
+
+* Added heyday/responsive-images to requirements and added support for picture elements

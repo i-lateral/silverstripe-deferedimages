@@ -47,6 +47,7 @@ ilateral\SilverStripe\DeferedImages\DeferedImage:
     blur: 50 // Apply a gaussian blur filter with a optional amount on the current image. Use values between 0 and 100.
     quality: 10  // Define the quality of the encoded image. Data ranging from 0 to 100.
     scale: 100 // Will resize the image to a percentage amount. 100 = current size, 50 = half size, etc.
+    limit: 1000 // sets a maximum width for the defered image - will force scaling if original image is larger than this.
 ```
 
 To enable deferring of images added in a `HTMLEditorField` you will need to enable the included shortcode parser via _config.php:

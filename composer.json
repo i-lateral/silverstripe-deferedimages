@@ -17,7 +17,8 @@
     "require": {
         "silverstripe/framework": "~4.0",
         "silverstripe/assets": "~1.0",
-        "i-lateral/silverstripe-deferedimages-theme": "^1.0"
+        "i-lateral/silverstripe-deferedimages-theme": "^1.0",
+        "heyday/silverstripe-responsive-images": "^2.0"
     },
     "extra": {
         "expose": [
