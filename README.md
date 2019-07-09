@@ -4,6 +4,8 @@
 
 Module that loads images as a very low res version first, then uses JavaScript to load the full version
 
+Now implements [heyday/silverstripe-responsive-images](https://github.com/heyday/silverstripe-responsive-images) without any extra configuration. Simply configure the responsive images module as you normally would and call them in the template. 
+
 ## Installation
 
 install via composer
