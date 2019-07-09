@@ -24,7 +24,7 @@ class DeferedImage extends DataExtension
      * @config
      * @var integer
      */
-    private static $blur = 50;
+    private static $blur = 0;
 
     /**
      * quality of new image from 0 to 100
