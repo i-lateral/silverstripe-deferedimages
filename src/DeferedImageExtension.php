@@ -48,7 +48,7 @@ class DeferedImage extends DataExtension
      * @config
      * @var integer
      */
-    private static $limit = 1000;
+    private static $limit = 1400;
 
     /**
      * Generates a reduced quality version of the current image
