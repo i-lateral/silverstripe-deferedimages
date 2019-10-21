@@ -21,9 +21,11 @@
             }
         }
 
-        picturefill({
-            reevaluate: true
-        });
+        if (typeof picturefill === "function") {
+            picturefill({
+                reevaluate: true
+            });
+        }
     }
     
     if (window.addEventListener) {
